@@ -22,6 +22,9 @@ body {
     width: 100%;
     font-family: 'League Spartan', sans-serif;
     background-color: var(--white);
+    /* the following background styles is from @ramakrishnagarlapati https://github.com/ramakrishnagarlapati/social-proof-section/blob/main/style.css */
+    background: url('images/bg-pattern-top-mobile.svg') no-repeat top left, url('images/bg-pattern-bottom-mobile.svg') no-repeat right bottom;
+    /* frontendmentor solution - https://www.frontendmentor.io/solutions/socialprofilesection--Cw44nH-1g */
 }
 /* ? Contanier Grid ? */
 .container {
@@ -189,8 +192,9 @@ body {
 }
 /* Profile Verified Buyer */
 .container .bottom .cards .profile .profile-details .verified-buyer {
-    color: var(--dark-grayish-magenta);
+    color: var(--soft-pink);
     font-weight: 400;
+    margin-top: 0.3rem;
 }
 /* Testimmony */
 .container .bottom .cards .testimony {
