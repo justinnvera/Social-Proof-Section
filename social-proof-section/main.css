@@ -23,7 +23,7 @@ body {
     font-family: 'League Spartan', sans-serif;
     background-color: var(--white);
     /* the following background styles is from @ramakrishnagarlapati https://github.com/ramakrishnagarlapati/social-proof-section/blob/main/style.css */
-    background: url('images/bg-pattern-top-mobile.svg') no-repeat top left, url('images/bg-pattern-bottom-mobile.svg') no-repeat right bottom;
+    background: url('images/bg-pattern-top-desktop.svg') top left no-repeat, url('images/bg-pattern-bottom-desktop.svg') right bottom no-repeat;
     /* frontendmentor solution - https://www.frontendmentor.io/solutions/socialprofilesection--Cw44nH-1g */
 }
 /* ? Contanier Grid ? */
@@ -203,6 +203,9 @@ body {
 }
 /* ! Media Queries */
 @media screen and (max-width: 1550px) {
+    body {
+        background: url('images/bg-pattern-top-mobile.svg') top left no-repeat, url('images/bg-pattern-bottom-mobile.svg') right bottom no-repeat;
+    }
     /* ? Container Grid ? */
     .container {
         gap: 3rem;
