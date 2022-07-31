@@ -1,0 +1,326 @@
+/* ! Global ! */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root {
+    /* Primary colors */
+    --very-dark-magenta: hsl(300, 43%, 22%);
+    --soft-pink: hsl(333, 80%, 67%);  
+    --dark-grayish-magenta: hsl(303, 10%, 53%);
+    /* Neutral colors */
+    --light-grayish-magenta: hsl(300, 24%, 96%);
+    --white: hsl(0, 0%, 100%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'League Spartan', sans-serif;
+    background-color: var(--white);
+}
+/* ? Contanier Grid ? */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "top"
+    "bottom";
+    gap: 5rem;
+    padding: 0 15rem;
+}
+.container .top {
+    grid-area: top;
+}
+.container .bottom {
+    grid-area: bottom;
+}
+/* ! Top ! */
+.container .top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "left right";
+    width: 100%;
+}
+.container .top .top-left {
+    grid-area: left;
+}
+.container .top .top-right {
+    grid-area: right;
+}
+/* ? Top Left Flex ? */
+.container .top .top-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/* ? Top Left Contents ? */
+.container .top .top-left .hero-title {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--very-dark-magenta);
+    max-width: 60%;
+    line-height: 3.5rem;
+}
+.container .top .top-left .hero-paragraph {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--dark-grayish-magenta);
+    max-width: 65%;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+}
+/* ? Top Right Flex ? */
+.container .top .top-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.container .top .top-right .review-1 {
+    align-self: flex-start;
+}
+.container .top .top-right .review-2 {
+    align-self: center;
+}
+.container .top .top-right .review-3 {
+    align-self: flex-end;
+}
+/* ? Top Right Contents ? */
+/* Reviews Container Grid */
+.container .top .top-right .reviews {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "left right";
+    background-color: var(--light-grayish-magenta);
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    padding: 1rem;
+}
+.container .top .top-right .reviews .reviews-left {
+    grid-area: left;
+}
+.container .top .top-right .reviews .reviews-right {
+    grid-area: right;
+}
+/* Reviews Stars Flex Container */
+.container .top .top-right .reviews .reviews-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Reviews Stars  */
+.container .top .top-right .reviews .reviews-left img {
+    margin: 4px;
+}
+/* Reviewed From */
+.container .top .top-right .reviews .reviews-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;;
+}
+.container .top .top-right .reviews .reviews-right h3 {
+    color: var(--very-dark-magenta);
+}
+/* ! Bottom ! */
+.container .bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+/* ? Bottom Cards Alignment ? */
+.container .bottom .card-1 {
+    align-self: flex-start;
+}
+.container .bottom .card-2 {
+    align-self: center;
+}
+.container .bottom .card-3 {
+    align-self: flex-end;
+}
+/* ? Bottom Cards Contents ? */
+.container .bottom .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--very-dark-magenta);
+    border-radius: 8px;
+    width: 100%;
+    height: 65%;
+    padding: 2rem;
+}
+/* Profile  */
+.container .bottom .cards .profile {
+    display: flex;
+}
+/* Profile Image */
+.container .bottom .cards .profile .profile-image-container .profile-image {
+    width: 40px;
+    border-radius: 50%;
+}
+/* Profile Details */
+.container .bottom .cards .profile .profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-left: 1rem;
+}
+/* Profile Name */
+.container .bottom .cards .profile .profile-details .profile-name {
+    color: var(--white);
+}
+/* Profile Verified Buyer */
+.container .bottom .cards .profile .profile-details .verified-buyer {
+    color: var(--dark-grayish-magenta);
+    font-weight: 400;
+}
+/* Testimmony */
+.container .bottom .cards .testimony {
+    color: var(--white);
+    line-height: 1.5rem;
+}
+/* ! Media Queries */
+@media screen and (max-width: 1550px) {
+    /* ? Container Grid ? */
+    .container {
+        gap: 3rem;
+        padding: 0 8rem;
+    }
+    /* ? Top Left Contents ? */
+    .container .top .top-left .hero-paragraph {
+        margin-top: 1.5rem;
+    }
+}   
+@media screen and (max-width: 1275px) {
+    /* ? Container Grid ? */
+    .container {
+        padding: 2rem 3rem;
+    }
+    /* ! Top ! */
+    .container .top {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+        "left"
+        "right";
+        width: 100%;
+    }
+    /* ? Top Left Flex ? */
+    .container .top .top-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+    }
+    /* ? Top Left Contents ? */
+    .container .top .top-left .hero-title {
+        max-width: 190%;
+    }
+    .container .top .top-left .hero-paragraph {
+        margin-top: 1.5rem;
+        max-width: 100%;
+    }
+    /* ? Top Right Container ? */
+    .container .top .top-right {
+        margin-top: 2rem;
+    }
+    /* ? Top Right Flex ? */
+    .container .top .top-right .review-1 {
+        align-self: center;
+    }
+    .container .top .top-right .review-2 {
+        align-self: center;
+    }
+    .container .top .top-right .review-3 {
+        align-self: center;
+    }
+    /* ? Top Right Contents ? */
+    /* Reviews Container Grid */
+    .container .top .top-right .reviews {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "left"
+        "right";
+        width: 90%;
+        gap: 0.5rem;
+    }
+    /* ! Bottom ! */
+    .container .bottom {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+    }
+    /* ? Bottom Cards Alignment ? */
+    .container .bottom .card-1 {
+        align-self: center;
+    }
+    .container .bottom .card-2 {
+        align-self: center;
+    }
+    .container .bottom .card-3 {
+        align-self: center;
+    }
+    /* ? Bottom Cards Contents ? */
+    .container .bottom .cards {
+        display: flex;
+        flex-direction: column;
+        width: 87%;
+        height: 100%;
+    }
+    /* Testimmony */
+    .container .bottom .cards .testimony {
+        color: var(--white);
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+    }
+}
+@media screen and (max-width: 625px) {
+    .container .top .top-right {
+        margin-top: 0;
+    }
+    .container .top .top-left .hero-title {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+    .container {
+        gap: 1.5rem;
+    }
+}
+@media screen and (max-width: 445px) {
+    .container {
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .container .top .top-left .hero-title {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+    .container {
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+}
