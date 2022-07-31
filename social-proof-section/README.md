@@ -26,12 +26,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](screenshot.jpg)
+![](screenshot.png)
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA/hub/social-proof-section-css-grid-flexbox-and-variables-Ni8GWiCg2s)
+- Live Site URL: [Vercel](https://social-proof-section-gamma-five.vercel.app)
 
 ## My process
 
